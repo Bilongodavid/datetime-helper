@@ -2,12 +2,6 @@
 
 `date-time-formatter` is a versatile Node.js package for formatting dates and times in various formats. It supports both CommonJS and ES Modules, making it easy to integrate into any Node.js project.
 
-## Installation
-
-```markdown
-npm install date-time-formatter
-```
-
 ## Usage
 
 ### CommonJS
@@ -34,7 +28,7 @@ const {
   subMinutesFromDate,
   addSecondsToDate,
   subSecondsFromDate,
-} = require("./dist/index.cjs");
+} = require("@codedav/date-time-formatter");
 
 const date = new Date();
 
@@ -84,7 +78,7 @@ import {
   addSecondsToDate,
   subSecondsFromDate,
   formatDateTime,
-} from "./dist/index.mjs";
+} from "@codedav/date-time-formatter";
 
 const date = new Date();
 

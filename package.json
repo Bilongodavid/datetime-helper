@@ -1,6 +1,6 @@
 {
-  "name": "date-time-formatter",
-  "version": "1.0.0",
+  "name": "@codedav/date-time-formatter",
+  "version": "1.0.2",
   "description": "A Node.js package for formatting dates and times.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -15,7 +15,9 @@
   ],
   "author": "Bilongo David",
   "license": "ISC",
+  "private": false,
   "dependencies": {
+    "@codedav/date-time-formatter": "^1.0.1",
     "date-fns": "^3.6.0",
     "date-fns-tz": "^3.1.3"
   },
