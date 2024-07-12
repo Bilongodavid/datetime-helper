@@ -17,7 +17,6 @@
   "license": "ISC",
   "private": false,
   "dependencies": {
-    "@codedav/date-time-formatter": "^1.0.1",
     "date-fns": "^3.6.0",
     "date-fns-tz": "^3.1.3"
   },
