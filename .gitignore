@@ -3,6 +3,5 @@ node_modules/
 
 # Ignorer les fichiers d'environnement locaux
 .env
-
 # Ignorer les fichiers de sauvegarde créés par les éditeurs
 
