@@ -1,6 +1,6 @@
 {
-  "name": "@codedav/date-time-formatter",
-  "version": "1.0.2",
+  "name": "@codedav/datetime-helper",
+  "version": "1.0.1",
   "description": "A Node.js package for formatting dates and times.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -22,6 +22,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bilongodavid/date-time-formatter"
+    "url": "https://github.com/Bilongodavid/datetime-helper"
   }
 }
