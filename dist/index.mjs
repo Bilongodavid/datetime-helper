@@ -1,4 +1,7 @@
 import { format, addDays, subDays, addMonths, subMonths, addYears, subYears, addHours, subHours, addMinutes, subMinutes, addSeconds, subSeconds } from 'date-fns';
+import {  enUS, fr, es, ptBR, it, nl, ja, zhCN, arSA, ru, sv, 
+  bg, ca, cs, da, el, he, hu, id, ko, lt, lv, mk, ms, 
+   pl, ro, sk, sl, th, tr, uk, vi, zhTW  }  from 'date-fns/locale'; 
 /**
  * Formate une date et une heure selon le format spécifié.
  * @param {Date} date - La date à formater.
@@ -118,4 +121,145 @@ export function addSecondsToDate(date, seconds) {
 
 export function subSecondsFromDate(date, seconds) {
   return subSeconds(date, seconds);
+}
+
+export function formatLocale(date, localeCode) {
+  let locale;
+  let formatString;
+  switch (localeCode) {
+    case 'fr':
+      locale = fr;
+      formatString = 'eeee dd MMMM yyyy'; // Exemple en français
+      break;
+    case 'es':
+      locale = es;
+      formatString = 'd MMMM yyyy'; // Exemple en espagnol
+      break;
+    case 'pt':
+      locale = ptBR;
+      formatString = 'd MMMM yyyy'; // Exemple en portugais
+      break;
+    case 'it':
+      locale = it;
+      formatString = 'd MMMM yyyy'; // Exemple en italien
+      break;
+    case 'nl':
+      locale = nl;
+      formatString = 'd MMMM yyyy'; // Exemple en néerlandais
+      break;
+    case 'ja':
+      locale = ja;
+      formatString = 'yyyy年M月d日'; // Exemple en japonais
+      break;
+    case 'zh':
+      locale = zhCN;
+      formatString = 'yyyy年M月d日'; // Exemple en chinois simplifié
+      break;
+    case 'ar':
+      locale = arSA;
+      formatString = 'd MMMM yyyy'; // Exemple en arabe
+      break;
+    case 'ru':
+      locale = ru;
+      formatString = 'd MMMM yyyy г.'; // Exemple en russe
+      break;
+    case 'sv':
+      locale = sv;
+      formatString = 'd MMMM yyyy'; // Exemple en suédois
+      break;
+    case 'bg':
+      locale = bg;
+      formatString = 'd MMMM yyyy г.'; // Exemple en bulgare
+      break;
+    case 'ca':
+      locale = ca;
+      formatString = 'd MMMM yyyy'; // Exemple en catalan
+      break;
+    case 'cs':
+      locale = cs;
+      formatString = 'd. MMMM yyyy'; // Exemple en tchèque
+      break;
+    case 'da':
+      locale = da;
+      formatString = 'd. MMMM yyyy'; // Exemple en danois
+      break;
+    case 'el':
+      locale = el;
+      formatString = 'd MMMM yyyy'; // Exemple en grec
+      break;
+    case 'he':
+      locale = he;
+      formatString = 'd בMMMM yyyy'; // Exemple en hébreu
+      break;
+    case 'hu':
+      locale = hu;
+      formatString = 'yyyy. MMMM d.'; // Exemple en hongrois
+      break;
+    case 'id':
+      locale = id;
+      formatString = 'd MMMM yyyy'; // Exemple en indonésien
+      break;
+    case 'ko':
+      locale = ko;
+      formatString = 'yyyy년 M월 d일'; // Exemple en coréen
+      break;
+    case 'lt':
+      locale = lt;
+      formatString = 'yyyy m. MMMM d d.'; // Exemple en lituanien
+      break;
+    case 'lv':
+      locale = lv;
+      formatString = 'yyyy m. MMMM d d.';  // Exemple en letton
+      break;
+    case 'mk':
+      locale = mk;
+      formatString = 'd MMMM yyyy'; // Exemple en macédonien
+      break;
+    case 'ms':
+      locale = ms;
+      formatString = 'd MMMM yyyy'; // Exemple en malais
+      break;
+    case 'pl':
+      locale = pl;
+      formatString = 'd MMMM yyyy'; // Exemple en polonais
+      break;
+    case 'ro':
+      locale = ro;
+      formatString = 'd MMMM yyyy'; // Exemple en roumain
+      break;
+    case 'sk':
+      locale = sk;
+      formatString = 'd. MMMM yyyy'; // Exemple en slovaque
+      break;
+    case 'sl':
+      locale = sl;
+      formatString = 'd. MMMM yyyy'; // Exemple en slovène
+      break;
+    case 'th':
+      locale = th;
+      formatString = 'd MMMM yyyy'; // Exemple en thaï
+      break;
+    case 'tr':
+      locale = tr;
+      formatString = 'd MMMM yyyy'; // Exemple en turc
+      break;
+    case 'uk':
+      locale = uk;
+      formatString = 'd MMMM yyyy'; // Exemple en ukrainien
+      break;
+    case 'vi':
+      locale = vi;
+      formatString = 'd MMMM yyyy'; // Exemple en vietnamien
+      break;
+    case 'zhTW':
+      locale = zhTW;
+      formatString = 'yyyy年M月d日'; // Exemple en chinois traditionnel
+      break;
+    default:
+      locale = enUS;
+      formatString = 'MMMM d, yyyy'; // Exemple en anglais
+      break;
+  }
+
+  return format(date, formatString, { locale });
 }
