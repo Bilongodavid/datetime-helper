@@ -1,4 +1,3 @@
-```markdown
 # Date Time Helper
 
 `datetime-helper` is a versatile Node.js package for formatting dates and times in various formats. It supports both CommonJS and ES Modules, making it easy to integrate into any Node.js project.
